@@ -1,0 +1,19 @@
+# SoSkin
+
+> SoSkin — intelligent skincare rescue powered by AI. Personalized routines, ingredient analysis, and trusted beauty guidance for consumers and beauty experts in Egypt.
+
+SoSkin helps users diagnose skin concerns, analyze cosmetic ingredients via the camera, get AI-personalized routines, and learn through a built-in beauty academy. An Expert mode adds an in-store Sales Co-Pilot for advisors.
+
+## Pages
+
+- [Home](/): Overview of SoSkin and entry to all tools.
+- [Beauty Academy](/academy): Bite-sized lessons and quizzes on skincare science.
+- [SOS Rescue](/sos): Instant AI guidance for urgent skin problems.
+- [Ingredient Scan](/scan): Scan a product label with your camera and decode ingredients.
+- [Trends](/trends): What's trending in the Egyptian beauty market.
+- [Founder](/founder): About Omar Soliman and the SoSkin mission.
+
+## Optional
+
+- [Privacy Policy](/privacy): How user data is handled.
+- [Terms of Service](/terms): Terms for using SoSkin.
