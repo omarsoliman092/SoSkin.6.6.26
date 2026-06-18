@@ -15,7 +15,6 @@ import { Route as TrendsRouteImport } from './routes/trends'
 import { Route as ToolsRouteImport } from './routes/tools'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SosRouteImport } from './routes/sos'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SimulatorRouteImport } from './routes/simulator'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SettingsRouteImport } from './routes/settings'
@@ -94,11 +93,6 @@ const TermsRoute = TermsRouteImport.update({
 const SosRoute = SosRouteImport.update({
   id: '/sos',
   path: '/sos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SimulatorRoute = SimulatorRouteImport.update({
@@ -377,7 +371,6 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/simulator': typeof SimulatorRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sos': typeof SosRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
@@ -435,7 +428,6 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/simulator': typeof SimulatorRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sos': typeof SosRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
@@ -494,7 +486,6 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/simulator': typeof SimulatorRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sos': typeof SosRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
@@ -554,7 +545,6 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/simulator'
-    | '/sitemap.xml'
     | '/sos'
     | '/terms'
     | '/tools'
@@ -612,7 +602,6 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/simulator'
-    | '/sitemap.xml'
     | '/sos'
     | '/terms'
     | '/tools'
@@ -670,7 +659,6 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/simulator'
-    | '/sitemap.xml'
     | '/sos'
     | '/terms'
     | '/tools'
@@ -729,7 +717,6 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   SignupRoute: typeof SignupRoute
   SimulatorRoute: typeof SimulatorRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SosRoute: typeof SosRoute
   TermsRoute: typeof TermsRoute
   ToolsRoute: typeof ToolsRoute
@@ -800,13 +787,6 @@ declare module '@tanstack/react-router' {
       path: '/sos'
       fullPath: '/sos'
       preLoaderRoute: typeof SosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/simulator': {
@@ -1185,7 +1165,6 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   SignupRoute: SignupRoute,
   SimulatorRoute: SimulatorRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SosRoute: SosRoute,
   TermsRoute: TermsRoute,
   ToolsRoute: ToolsRoute,

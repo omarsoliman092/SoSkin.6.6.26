@@ -1,6 +1,6 @@
-import { createFileRoute } from \"@tanstack/react-router\";
-import { z } from \"zod\";
-import { callAI } from \"@/lib/ai-handler.server\";
+import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
+import { callAI } from "@/lib/ai-handler.server";
 import { googleSearch } from "@/lib/google-search.server";
 
 const PHARMACY_SITES = [
