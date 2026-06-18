@@ -44,26 +44,6 @@ import { Route as BeautyPassRouteImport } from './routes/beauty-pass'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ApiPublicUniversityRouteImport } from './routes/api/public/university'
-import { Route as ApiPublicTrustRouteImport } from './routes/api/public/trust'
-import { Route as ApiPublicTrendsRouteImport } from './routes/api/public/trends'
-import { Route as ApiPublicSosRouteImport } from './routes/api/public/sos'
-import { Route as ApiPublicSkinDetectRouteImport } from './routes/api/public/skin-detect'
-import { Route as ApiPublicSimulatorRouteImport } from './routes/api/public/simulator'
-import { Route as ApiPublicReplenishRouteImport } from './routes/api/public/replenish'
-import { Route as ApiPublicQuickAnalyzeRouteImport } from './routes/api/public/quick-analyze'
-import { Route as ApiPublicProgressRouteImport } from './routes/api/public/progress'
-import { Route as ApiPublicObjectionRouteImport } from './routes/api/public/objection'
-import { Route as ApiPublicNextBestRouteImport } from './routes/api/public/next-best'
-import { Route as ApiPublicDupesRouteImport } from './routes/api/public/dupes'
-import { Route as ApiPublicDecideRouteImport } from './routes/api/public/decide'
-import { Route as ApiPublicCopilotRouteImport } from './routes/api/public/copilot'
-import { Route as ApiPublicConflictsRouteImport } from './routes/api/public/conflicts'
-import { Route as ApiPublicCompatRouteImport } from './routes/api/public/compat'
-import { Route as ApiPublicChatRouteImport } from './routes/api/public/chat'
-import { Route as ApiPublicBuilderRouteImport } from './routes/api/public/builder'
-import { Route as ApiPublicAnalyzeRouteImport } from './routes/api/public/analyze'
-import { Route as ApiPublicAcademyRouteImport } from './routes/api/public/academy'
 
 const UniversityRoute = UniversityRouteImport.update({
   id: '/university',
@@ -240,106 +220,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicUniversityRoute = ApiPublicUniversityRouteImport.update({
-  id: '/api/public/university',
-  path: '/api/public/university',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicTrustRoute = ApiPublicTrustRouteImport.update({
-  id: '/api/public/trust',
-  path: '/api/public/trust',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicTrendsRoute = ApiPublicTrendsRouteImport.update({
-  id: '/api/public/trends',
-  path: '/api/public/trends',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicSosRoute = ApiPublicSosRouteImport.update({
-  id: '/api/public/sos',
-  path: '/api/public/sos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicSkinDetectRoute = ApiPublicSkinDetectRouteImport.update({
-  id: '/api/public/skin-detect',
-  path: '/api/public/skin-detect',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicSimulatorRoute = ApiPublicSimulatorRouteImport.update({
-  id: '/api/public/simulator',
-  path: '/api/public/simulator',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicReplenishRoute = ApiPublicReplenishRouteImport.update({
-  id: '/api/public/replenish',
-  path: '/api/public/replenish',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicQuickAnalyzeRoute = ApiPublicQuickAnalyzeRouteImport.update({
-  id: '/api/public/quick-analyze',
-  path: '/api/public/quick-analyze',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicProgressRoute = ApiPublicProgressRouteImport.update({
-  id: '/api/public/progress',
-  path: '/api/public/progress',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicObjectionRoute = ApiPublicObjectionRouteImport.update({
-  id: '/api/public/objection',
-  path: '/api/public/objection',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicNextBestRoute = ApiPublicNextBestRouteImport.update({
-  id: '/api/public/next-best',
-  path: '/api/public/next-best',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicDupesRoute = ApiPublicDupesRouteImport.update({
-  id: '/api/public/dupes',
-  path: '/api/public/dupes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicDecideRoute = ApiPublicDecideRouteImport.update({
-  id: '/api/public/decide',
-  path: '/api/public/decide',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicCopilotRoute = ApiPublicCopilotRouteImport.update({
-  id: '/api/public/copilot',
-  path: '/api/public/copilot',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicConflictsRoute = ApiPublicConflictsRouteImport.update({
-  id: '/api/public/conflicts',
-  path: '/api/public/conflicts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicCompatRoute = ApiPublicCompatRouteImport.update({
-  id: '/api/public/compat',
-  path: '/api/public/compat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicChatRoute = ApiPublicChatRouteImport.update({
-  id: '/api/public/chat',
-  path: '/api/public/chat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicBuilderRoute = ApiPublicBuilderRouteImport.update({
-  id: '/api/public/builder',
-  path: '/api/public/builder',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicAnalyzeRoute = ApiPublicAnalyzeRouteImport.update({
-  id: '/api/public/analyze',
-  path: '/api/public/analyze',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicAcademyRoute = ApiPublicAcademyRouteImport.update({
-  id: '/api/public/academy',
-  path: '/api/public/academy',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -377,26 +257,6 @@ export interface FileRoutesByFullPath {
   '/trends': typeof TrendsRoute
   '/trust': typeof TrustRoute
   '/university': typeof UniversityRoute
-  '/api/public/academy': typeof ApiPublicAcademyRoute
-  '/api/public/analyze': typeof ApiPublicAnalyzeRoute
-  '/api/public/builder': typeof ApiPublicBuilderRoute
-  '/api/public/chat': typeof ApiPublicChatRoute
-  '/api/public/compat': typeof ApiPublicCompatRoute
-  '/api/public/conflicts': typeof ApiPublicConflictsRoute
-  '/api/public/copilot': typeof ApiPublicCopilotRoute
-  '/api/public/decide': typeof ApiPublicDecideRoute
-  '/api/public/dupes': typeof ApiPublicDupesRoute
-  '/api/public/next-best': typeof ApiPublicNextBestRoute
-  '/api/public/objection': typeof ApiPublicObjectionRoute
-  '/api/public/progress': typeof ApiPublicProgressRoute
-  '/api/public/quick-analyze': typeof ApiPublicQuickAnalyzeRoute
-  '/api/public/replenish': typeof ApiPublicReplenishRoute
-  '/api/public/simulator': typeof ApiPublicSimulatorRoute
-  '/api/public/skin-detect': typeof ApiPublicSkinDetectRoute
-  '/api/public/sos': typeof ApiPublicSosRoute
-  '/api/public/trends': typeof ApiPublicTrendsRoute
-  '/api/public/trust': typeof ApiPublicTrustRoute
-  '/api/public/university': typeof ApiPublicUniversityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -434,26 +294,6 @@ export interface FileRoutesByTo {
   '/trends': typeof TrendsRoute
   '/trust': typeof TrustRoute
   '/university': typeof UniversityRoute
-  '/api/public/academy': typeof ApiPublicAcademyRoute
-  '/api/public/analyze': typeof ApiPublicAnalyzeRoute
-  '/api/public/builder': typeof ApiPublicBuilderRoute
-  '/api/public/chat': typeof ApiPublicChatRoute
-  '/api/public/compat': typeof ApiPublicCompatRoute
-  '/api/public/conflicts': typeof ApiPublicConflictsRoute
-  '/api/public/copilot': typeof ApiPublicCopilotRoute
-  '/api/public/decide': typeof ApiPublicDecideRoute
-  '/api/public/dupes': typeof ApiPublicDupesRoute
-  '/api/public/next-best': typeof ApiPublicNextBestRoute
-  '/api/public/objection': typeof ApiPublicObjectionRoute
-  '/api/public/progress': typeof ApiPublicProgressRoute
-  '/api/public/quick-analyze': typeof ApiPublicQuickAnalyzeRoute
-  '/api/public/replenish': typeof ApiPublicReplenishRoute
-  '/api/public/simulator': typeof ApiPublicSimulatorRoute
-  '/api/public/skin-detect': typeof ApiPublicSkinDetectRoute
-  '/api/public/sos': typeof ApiPublicSosRoute
-  '/api/public/trends': typeof ApiPublicTrendsRoute
-  '/api/public/trust': typeof ApiPublicTrustRoute
-  '/api/public/university': typeof ApiPublicUniversityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -492,26 +332,6 @@ export interface FileRoutesById {
   '/trends': typeof TrendsRoute
   '/trust': typeof TrustRoute
   '/university': typeof UniversityRoute
-  '/api/public/academy': typeof ApiPublicAcademyRoute
-  '/api/public/analyze': typeof ApiPublicAnalyzeRoute
-  '/api/public/builder': typeof ApiPublicBuilderRoute
-  '/api/public/chat': typeof ApiPublicChatRoute
-  '/api/public/compat': typeof ApiPublicCompatRoute
-  '/api/public/conflicts': typeof ApiPublicConflictsRoute
-  '/api/public/copilot': typeof ApiPublicCopilotRoute
-  '/api/public/decide': typeof ApiPublicDecideRoute
-  '/api/public/dupes': typeof ApiPublicDupesRoute
-  '/api/public/next-best': typeof ApiPublicNextBestRoute
-  '/api/public/objection': typeof ApiPublicObjectionRoute
-  '/api/public/progress': typeof ApiPublicProgressRoute
-  '/api/public/quick-analyze': typeof ApiPublicQuickAnalyzeRoute
-  '/api/public/replenish': typeof ApiPublicReplenishRoute
-  '/api/public/simulator': typeof ApiPublicSimulatorRoute
-  '/api/public/skin-detect': typeof ApiPublicSkinDetectRoute
-  '/api/public/sos': typeof ApiPublicSosRoute
-  '/api/public/trends': typeof ApiPublicTrendsRoute
-  '/api/public/trust': typeof ApiPublicTrustRoute
-  '/api/public/university': typeof ApiPublicUniversityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -551,26 +371,6 @@ export interface FileRouteTypes {
     | '/trends'
     | '/trust'
     | '/university'
-    | '/api/public/academy'
-    | '/api/public/analyze'
-    | '/api/public/builder'
-    | '/api/public/chat'
-    | '/api/public/compat'
-    | '/api/public/conflicts'
-    | '/api/public/copilot'
-    | '/api/public/decide'
-    | '/api/public/dupes'
-    | '/api/public/next-best'
-    | '/api/public/objection'
-    | '/api/public/progress'
-    | '/api/public/quick-analyze'
-    | '/api/public/replenish'
-    | '/api/public/simulator'
-    | '/api/public/skin-detect'
-    | '/api/public/sos'
-    | '/api/public/trends'
-    | '/api/public/trust'
-    | '/api/public/university'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -608,26 +408,6 @@ export interface FileRouteTypes {
     | '/trends'
     | '/trust'
     | '/university'
-    | '/api/public/academy'
-    | '/api/public/analyze'
-    | '/api/public/builder'
-    | '/api/public/chat'
-    | '/api/public/compat'
-    | '/api/public/conflicts'
-    | '/api/public/copilot'
-    | '/api/public/decide'
-    | '/api/public/dupes'
-    | '/api/public/next-best'
-    | '/api/public/objection'
-    | '/api/public/progress'
-    | '/api/public/quick-analyze'
-    | '/api/public/replenish'
-    | '/api/public/simulator'
-    | '/api/public/skin-detect'
-    | '/api/public/sos'
-    | '/api/public/trends'
-    | '/api/public/trust'
-    | '/api/public/university'
   id:
     | '__root__'
     | '/'
@@ -665,26 +445,6 @@ export interface FileRouteTypes {
     | '/trends'
     | '/trust'
     | '/university'
-    | '/api/public/academy'
-    | '/api/public/analyze'
-    | '/api/public/builder'
-    | '/api/public/chat'
-    | '/api/public/compat'
-    | '/api/public/conflicts'
-    | '/api/public/copilot'
-    | '/api/public/decide'
-    | '/api/public/dupes'
-    | '/api/public/next-best'
-    | '/api/public/objection'
-    | '/api/public/progress'
-    | '/api/public/quick-analyze'
-    | '/api/public/replenish'
-    | '/api/public/simulator'
-    | '/api/public/skin-detect'
-    | '/api/public/sos'
-    | '/api/public/trends'
-    | '/api/public/trust'
-    | '/api/public/university'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -723,26 +483,6 @@ export interface RootRouteChildren {
   TrendsRoute: typeof TrendsRoute
   TrustRoute: typeof TrustRoute
   UniversityRoute: typeof UniversityRoute
-  ApiPublicAcademyRoute: typeof ApiPublicAcademyRoute
-  ApiPublicAnalyzeRoute: typeof ApiPublicAnalyzeRoute
-  ApiPublicBuilderRoute: typeof ApiPublicBuilderRoute
-  ApiPublicChatRoute: typeof ApiPublicChatRoute
-  ApiPublicCompatRoute: typeof ApiPublicCompatRoute
-  ApiPublicConflictsRoute: typeof ApiPublicConflictsRoute
-  ApiPublicCopilotRoute: typeof ApiPublicCopilotRoute
-  ApiPublicDecideRoute: typeof ApiPublicDecideRoute
-  ApiPublicDupesRoute: typeof ApiPublicDupesRoute
-  ApiPublicNextBestRoute: typeof ApiPublicNextBestRoute
-  ApiPublicObjectionRoute: typeof ApiPublicObjectionRoute
-  ApiPublicProgressRoute: typeof ApiPublicProgressRoute
-  ApiPublicQuickAnalyzeRoute: typeof ApiPublicQuickAnalyzeRoute
-  ApiPublicReplenishRoute: typeof ApiPublicReplenishRoute
-  ApiPublicSimulatorRoute: typeof ApiPublicSimulatorRoute
-  ApiPublicSkinDetectRoute: typeof ApiPublicSkinDetectRoute
-  ApiPublicSosRoute: typeof ApiPublicSosRoute
-  ApiPublicTrendsRoute: typeof ApiPublicTrendsRoute
-  ApiPublicTrustRoute: typeof ApiPublicTrustRoute
-  ApiPublicUniversityRoute: typeof ApiPublicUniversityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -992,146 +732,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/university': {
-      id: '/api/public/university'
-      path: '/api/public/university'
-      fullPath: '/api/public/university'
-      preLoaderRoute: typeof ApiPublicUniversityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/trust': {
-      id: '/api/public/trust'
-      path: '/api/public/trust'
-      fullPath: '/api/public/trust'
-      preLoaderRoute: typeof ApiPublicTrustRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/trends': {
-      id: '/api/public/trends'
-      path: '/api/public/trends'
-      fullPath: '/api/public/trends'
-      preLoaderRoute: typeof ApiPublicTrendsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/sos': {
-      id: '/api/public/sos'
-      path: '/api/public/sos'
-      fullPath: '/api/public/sos'
-      preLoaderRoute: typeof ApiPublicSosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/skin-detect': {
-      id: '/api/public/skin-detect'
-      path: '/api/public/skin-detect'
-      fullPath: '/api/public/skin-detect'
-      preLoaderRoute: typeof ApiPublicSkinDetectRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/simulator': {
-      id: '/api/public/simulator'
-      path: '/api/public/simulator'
-      fullPath: '/api/public/simulator'
-      preLoaderRoute: typeof ApiPublicSimulatorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/replenish': {
-      id: '/api/public/replenish'
-      path: '/api/public/replenish'
-      fullPath: '/api/public/replenish'
-      preLoaderRoute: typeof ApiPublicReplenishRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/quick-analyze': {
-      id: '/api/public/quick-analyze'
-      path: '/api/public/quick-analyze'
-      fullPath: '/api/public/quick-analyze'
-      preLoaderRoute: typeof ApiPublicQuickAnalyzeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/progress': {
-      id: '/api/public/progress'
-      path: '/api/public/progress'
-      fullPath: '/api/public/progress'
-      preLoaderRoute: typeof ApiPublicProgressRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/objection': {
-      id: '/api/public/objection'
-      path: '/api/public/objection'
-      fullPath: '/api/public/objection'
-      preLoaderRoute: typeof ApiPublicObjectionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/next-best': {
-      id: '/api/public/next-best'
-      path: '/api/public/next-best'
-      fullPath: '/api/public/next-best'
-      preLoaderRoute: typeof ApiPublicNextBestRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/dupes': {
-      id: '/api/public/dupes'
-      path: '/api/public/dupes'
-      fullPath: '/api/public/dupes'
-      preLoaderRoute: typeof ApiPublicDupesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/decide': {
-      id: '/api/public/decide'
-      path: '/api/public/decide'
-      fullPath: '/api/public/decide'
-      preLoaderRoute: typeof ApiPublicDecideRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/copilot': {
-      id: '/api/public/copilot'
-      path: '/api/public/copilot'
-      fullPath: '/api/public/copilot'
-      preLoaderRoute: typeof ApiPublicCopilotRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/conflicts': {
-      id: '/api/public/conflicts'
-      path: '/api/public/conflicts'
-      fullPath: '/api/public/conflicts'
-      preLoaderRoute: typeof ApiPublicConflictsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/compat': {
-      id: '/api/public/compat'
-      path: '/api/public/compat'
-      fullPath: '/api/public/compat'
-      preLoaderRoute: typeof ApiPublicCompatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/chat': {
-      id: '/api/public/chat'
-      path: '/api/public/chat'
-      fullPath: '/api/public/chat'
-      preLoaderRoute: typeof ApiPublicChatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/builder': {
-      id: '/api/public/builder'
-      path: '/api/public/builder'
-      fullPath: '/api/public/builder'
-      preLoaderRoute: typeof ApiPublicBuilderRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/analyze': {
-      id: '/api/public/analyze'
-      path: '/api/public/analyze'
-      fullPath: '/api/public/analyze'
-      preLoaderRoute: typeof ApiPublicAnalyzeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/academy': {
-      id: '/api/public/academy'
-      path: '/api/public/academy'
-      fullPath: '/api/public/academy'
-      preLoaderRoute: typeof ApiPublicAcademyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -1171,27 +771,8 @@ const rootRouteChildren: RootRouteChildren = {
   TrendsRoute: TrendsRoute,
   TrustRoute: TrustRoute,
   UniversityRoute: UniversityRoute,
-  ApiPublicAcademyRoute: ApiPublicAcademyRoute,
-  ApiPublicAnalyzeRoute: ApiPublicAnalyzeRoute,
-  ApiPublicBuilderRoute: ApiPublicBuilderRoute,
-  ApiPublicChatRoute: ApiPublicChatRoute,
-  ApiPublicCompatRoute: ApiPublicCompatRoute,
-  ApiPublicConflictsRoute: ApiPublicConflictsRoute,
-  ApiPublicCopilotRoute: ApiPublicCopilotRoute,
-  ApiPublicDecideRoute: ApiPublicDecideRoute,
-  ApiPublicDupesRoute: ApiPublicDupesRoute,
-  ApiPublicNextBestRoute: ApiPublicNextBestRoute,
-  ApiPublicObjectionRoute: ApiPublicObjectionRoute,
-  ApiPublicProgressRoute: ApiPublicProgressRoute,
-  ApiPublicQuickAnalyzeRoute: ApiPublicQuickAnalyzeRoute,
-  ApiPublicReplenishRoute: ApiPublicReplenishRoute,
-  ApiPublicSimulatorRoute: ApiPublicSimulatorRoute,
-  ApiPublicSkinDetectRoute: ApiPublicSkinDetectRoute,
-  ApiPublicSosRoute: ApiPublicSosRoute,
-  ApiPublicTrendsRoute: ApiPublicTrendsRoute,
-  ApiPublicTrustRoute: ApiPublicTrustRoute,
-  ApiPublicUniversityRoute: ApiPublicUniversityRoute,
 }
+
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
