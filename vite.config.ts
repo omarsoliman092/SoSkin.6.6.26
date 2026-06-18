@@ -1,24 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
-// TanStack Start configuration for Vercel
 export default defineConfig({
   plugins: [
-    tanstackStart({
-      server: {
-        entry: "src/server.ts",
-      },
+    TanStackRouterVite({
+      routesDirectory: "./src/routes",
+      generatedRouteTree: "./src/routeTree.gen.ts",
     }),
     react(),
     tsconfigPaths(),
     tailwindcss(),
   ],
-  server: {
-    port: 5173,
-    strictPort: true,
-    host: true,
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
   },
+  // Ensure the base path is correct for Vercel
+  base: "/",
 });
