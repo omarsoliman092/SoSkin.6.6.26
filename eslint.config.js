@@ -29,6 +29,18 @@ export default tseslint.config(
               message:
                 "TanStack Start does not use the Next.js `server-only` package. Rename the module to `*.server.ts` or mark it with `@tanstack/react-start/server-only`.",
             },
+            {
+              name: "@mendable/firecrawl-js",
+              message:
+                "Firecrawl has been removed. Use Google Custom Search via src/lib/google-search.server.ts instead.",
+            },
+          ],
+          patterns: [
+            {
+              group: ["@mendable/firecrawl-js", "@mendable/firecrawl-js/*"],
+              message:
+                "Firecrawl has been removed. Use Google Custom Search via src/lib/google-search.server.ts instead.",
+            },
           ],
         },
       ],
