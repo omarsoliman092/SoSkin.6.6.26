@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useServerFn } from "@tanstack/react-start";
+import { useServerFn } from "@/lib/server-fn-mock";
 import { FeatureLockScreen } from "@/components/FeatureLockScreen";
 import { MobileShell } from "@/components/MobileShell";
 import { BottomNav } from "@/components/BottomNav";
