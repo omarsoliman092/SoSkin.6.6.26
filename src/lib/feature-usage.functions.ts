@@ -5,3 +5,9 @@ export const checkFeatureLimit = createServerFn({ method: "POST" }).handler(asyn
 export const incrementFeatureUsage = createServerFn({ method: "POST" }).handler(async () => {
   return { ok: true };
 });
+export const getFeatureUsage = createServerFn({ method: "GET" }).handler(async () => {
+  return { total: 0, items: [] };
+});
+export const logFeatureEvent = createServerFn({ method: "POST" }).handler(async () => {
+  return { ok: true };
+});
