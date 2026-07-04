@@ -4,7 +4,6 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
-// Pure Vite SPA configuration
 export default defineConfig({
   plugins: [
     TanStackRouterVite({
@@ -18,9 +17,10 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    sourcemap: false,
   },
   server: {
     host: true,
     port: 5173,
-  }
+  },
 });
