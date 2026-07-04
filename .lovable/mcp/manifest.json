@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "soskin-mcp",
+      "version": "0.1.0",
+      "title": "SoSkin MCP"
+    },
+    "tools": [
+      {
+        "name": "list_soskin_features",
+        "title": "List SoSkin features",
+        "description": "List the skincare tools and features available in the SoSkin app with deep-link paths.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "ask_soskin",
+        "title": "Ask SoSkin AI",
+        "description": "Ask SoSkin's Egyptian skincare advisor a question (routine advice, ingredient questions, product comparisons). Returns a short expert answer.",
+        "annotations": {
+          "readOnlyHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 1000,
+              "description": "The skincare question in Arabic or English."
+            },
+            "skinType": {
+              "description": "Optional skin type context.",
+              "type": "string",
+              "enum": [
+                "dry",
+                "oily",
+                "combination",
+                "normal",
+                "sensitive"
+              ]
+            }
+          },
+          "required": [
+            "question"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

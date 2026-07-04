@@ -172,6 +172,17 @@
   filter: drop-shadow(0 2px 12px rgba(232, 200, 122, 0.45));
 }
 
+/* Watermark wordmark — visible on light backgrounds, subtle on dark */
+.watermark-wordmark {
+  opacity: 0.25;
+  filter: drop-shadow(0 4px 30px rgba(120, 90, 40, 0.6)) !important;
+}
+.dark .watermark-wordmark {
+  opacity: 0.08;
+  filter: drop-shadow(0 2px 12px rgba(232, 200, 122, 0.45)) !important;
+}
+
+
 @keyframes soskin-shine {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

@@ -31,9 +31,9 @@ export function MobileShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Gold SOSKIN wordmark watermark */}
-      <div className="fixed inset-0 pointer-events-none flex items-center justify-center opacity-[0.08]">
-        <SoskinWordmark size="xl" asLink={false} className="!text-[22vw] sm:!text-[18vw] md:!text-[14vw] lg:!text-[10vw] !tracking-[0.3em]" />
+      {/* SOSKIN wordmark watermark — stronger in light mode */}
+      <div className="fixed inset-0 pointer-events-none flex items-center justify-center">
+        <SoskinWordmark size="xl" asLink={false} className="watermark-wordmark !text-[22vw] sm:!text-[18vw] md:!text-[14vw] lg:!text-[10vw] !tracking-[0.3em]" />
       </div>
       <div className="relative max-w-md mx-auto pb-28 px-4 pt-[max(1rem,env(safe-area-inset-top))]">
 

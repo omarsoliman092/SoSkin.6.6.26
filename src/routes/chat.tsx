@@ -74,7 +74,7 @@ function ChatPage() {
     <>
       <div className="min-h-screen bg-background relative flex flex-col">
         <div className="fixed inset-0 pointer-events-none gradient-glow opacity-50" />
-        <div className="relative max-w-md w-full mx-auto flex-1 flex flex-col pt-[max(1rem,env(safe-area-inset-top))]">
+        <div className="relative w-full max-w-4xl mx-auto flex-1 flex flex-col pt-[max(1rem,env(safe-area-inset-top))]">
           <header className="px-4 flex items-center justify-between mb-3">
             <div className="flex items-center gap-2.5">
               <SoskinWordmark size="sm" asLink={false} />
@@ -135,27 +135,34 @@ function ChatPage() {
           </div>
 
           <div className="fixed bottom-20 inset-x-0 z-30">
-            <div className="max-w-md mx-auto px-4">
+            <div className="max-w-4xl mx-auto px-4">
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
                   send(input);
                 }}
-                className="flex items-center gap-2 glass border border-border rounded-2xl p-2 shadow-card"
+                className="flex items-end gap-2 glass border border-border rounded-3xl p-3 shadow-card"
               >
-                <input
+                <textarea
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      send(input);
+                    }
+                  }}
                   placeholder={t.placeholder}
-                  className="flex-1 bg-transparent px-3 py-2.5 outline-none text-sm"
+                  rows={2}
+                  className="flex-1 bg-transparent px-3 py-2 outline-none text-base leading-relaxed resize-none min-h-[56px] max-h-40"
                   disabled={busy}
                 />
                 <button
                   type="submit"
                   disabled={busy || !input.trim()}
-                  className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow disabled:opacity-40"
+                  className="w-12 h-12 rounded-2xl gradient-primary flex items-center justify-center shadow-glow disabled:opacity-40 shrink-0"
                 >
-                  <Send className="w-4 h-4 text-primary-foreground" />
+                  <Send className="w-5 h-5 text-primary-foreground" />
                 </button>
               </form>
             </div>
@@ -172,7 +179,7 @@ function Message({ role, content, typing }: { role: string; content: string; typ
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"} animate-float-up`}>
       <div
-        className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
+        className={`max-w-[85%] rounded-2xl px-4 py-3 text-base leading-relaxed whitespace-pre-wrap ${
           isUser
             ? "gradient-primary text-primary-foreground rounded-se-md"
             : "bg-card border border-border rounded-ss-md"

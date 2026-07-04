@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useServerFn } from "@/lib/server-fn-mock";
+import { useServerFn } from "@tanstack/react-start";
 import { getMyProStatus } from "@/lib/pro.functions";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";

@@ -138,9 +138,9 @@ export function Onboarding() {
         {(["female", "male"] as Gender[]).map((g) => (
           <button
             key={g}
-            onClick={() => set({ recommendFor: g, gender: g })}
-            className={`p-5 rounded-2xl border transition-all ${
-              draft.recommendFor === g ? "border-primary bg-primary/10 shadow-glow" : "border-border bg-card"
+            onClick={() => { set({ recommendFor: g, gender: g }); setTimeout(() => setStep((s) => s + 1), 220); }}
+            className={`p-5 rounded-2xl border transition-all duration-300 ${
+              draft.recommendFor === g ? "border-primary bg-primary/10 shadow-glow scale-[1.02]" : "border-border bg-card"
             }`}
           >
             <div className="text-3xl mb-2">{g === "female" ? "👩" : "👨"}</div>
