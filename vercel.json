@@ -1,5 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "vite build",
-  "outputDirectory": ".output/public"
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
