@@ -1,22 +1,19 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Standard Vite SPA Configuration - GUARANTEED to work on Vercel
 export default defineConfig({
-  plugins: [
-    react(),
-    tsconfigPaths(),
-    tailwindcss(),
-  ],
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
+  tanstackStart: {
+    server: { entry: "server" },
   },
-  resolve: {
-    alias: {
-      "@": "/src",
+  vite: {
+    optimizeDeps: {
+      include: [
+        "@tanstack/history",
+        "@tanstack/router-core",
+        "@tanstack/router-core/ssr/client",
+        "@tanstack/router-core/ssr/server",
+        "h3-v2",
+        "seroval",
+      ],
     },
   },
 });
