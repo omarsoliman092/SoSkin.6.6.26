@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>SoSkin Advisor</title>
     <link rel="icon" type="image/png" href="/favicon-32.png" />
+    <script>
+      // Global Error Catcher to diagnose blank screens
+      window.onerror = function(msg, url, line, col, error) {
+        document.body.innerHTML = '<div style="padding:20px;color:red;font-family:sans-serif;"><h1>Oops! Site crashed.</h1><p>' + msg + '</p><small>' + url + ':' + line + '</small></div>';
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>
