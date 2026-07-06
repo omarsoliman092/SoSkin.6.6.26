@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
+import { useServerFn } from "@/lib/server-fn-mock";
 import { Sparkles, ArrowLeft, Loader2 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { getQuickWin } from "@/lib/quickwin.functions";
