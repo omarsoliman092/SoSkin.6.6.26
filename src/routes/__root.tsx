@@ -41,7 +41,6 @@ const PUBLIC_PATHS = ["/", "/login", "/signup", "/reset-password", "/founder", "
 
 function AuthSync() {
   const router = useRouter();
-  const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -52,14 +51,16 @@ function AuthSync() {
     return () => subscription.unsubscribe();
   }, [router]);
 
+  // Temporary fix to stop the login loop while we verify the new design
   useEffect(() => {
     if (isLoading) return;
     const path = location.pathname;
     const isPublic = PUBLIC_PATHS.includes(path);
-    if (!isAuthenticated && !isPublic) {
-      navigate({ to: "/login" });
-    }
-  }, [isAuthenticated, isLoading, location.pathname, navigate]);
+    // Only redirect if NOT authenticated AND trying to access a restricted page
+    // if (!isAuthenticated && !isPublic) {
+    //   navigate({ to: "/login" });
+    // }
+  }, [isAuthenticated, isLoading, location.pathname]);
 
   return null;
 }
