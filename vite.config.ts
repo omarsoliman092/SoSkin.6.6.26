@@ -4,12 +4,12 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
-// Final SPA Configuration - RESTORES NEW UI while keeping independence
 export default defineConfig({
   plugins: [
     TanStackRouterVite({
       routesDirectory: "./src/routes",
       generatedRouteTree: "./src/routeTree.gen.ts",
+      quoteStyle: "single",
     }),
     react(),
     tsconfigPaths(),

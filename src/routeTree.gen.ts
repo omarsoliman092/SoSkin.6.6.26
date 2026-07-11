@@ -15,7 +15,6 @@ import { Route as TrendsRouteImport } from './routes/trends'
 import { Route as ToolsRouteImport } from './routes/tools'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SosRouteImport } from './routes/sos'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SimulatorRouteImport } from './routes/simulator'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SettingsRouteImport } from './routes/settings'
@@ -27,7 +26,6 @@ import { Route as ProgressRouteImport } from './routes/progress'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ObjectionsRouteImport } from './routes/objections'
-import { Route as McpRouteImport } from './routes/mcp'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as HistoryRouteImport } from './routes/history'
 import { Route as FounderRouteImport } from './routes/founder'
@@ -46,28 +44,6 @@ import { Route as BeautyPassRouteImport } from './routes/beauty-pass'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
-import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
-import { Route as ApiPublicUniversityRouteImport } from './routes/api/public/university'
-import { Route as ApiPublicTrustRouteImport } from './routes/api/public/trust'
-import { Route as ApiPublicTrendsRouteImport } from './routes/api/public/trends'
-import { Route as ApiPublicSosRouteImport } from './routes/api/public/sos'
-import { Route as ApiPublicSkinDetectRouteImport } from './routes/api/public/skin-detect'
-import { Route as ApiPublicSimulatorRouteImport } from './routes/api/public/simulator'
-import { Route as ApiPublicReplenishRouteImport } from './routes/api/public/replenish'
-import { Route as ApiPublicQuickAnalyzeRouteImport } from './routes/api/public/quick-analyze'
-import { Route as ApiPublicProgressRouteImport } from './routes/api/public/progress'
-import { Route as ApiPublicObjectionRouteImport } from './routes/api/public/objection'
-import { Route as ApiPublicNextBestRouteImport } from './routes/api/public/next-best'
-import { Route as ApiPublicDupesRouteImport } from './routes/api/public/dupes'
-import { Route as ApiPublicCopilotRouteImport } from './routes/api/public/copilot'
-import { Route as ApiPublicConflictsRouteImport } from './routes/api/public/conflicts'
-import { Route as ApiPublicCompatRouteImport } from './routes/api/public/compat'
-import { Route as ApiPublicChatRouteImport } from './routes/api/public/chat'
-import { Route as ApiPublicBuilderRouteImport } from './routes/api/public/builder'
-import { Route as ApiPublicAnalyzeRouteImport } from './routes/api/public/analyze'
-import { Route as ApiPublicAcademyRouteImport } from './routes/api/public/academy'
-import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
 const UniversityRoute = UniversityRouteImport.update({
   id: '/university',
@@ -97,11 +73,6 @@ const TermsRoute = TermsRouteImport.update({
 const SosRoute = SosRouteImport.update({
   id: '/sos',
   path: '/sos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SimulatorRoute = SimulatorRouteImport.update({
@@ -157,11 +128,6 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const ObjectionsRoute = ObjectionsRouteImport.update({
   id: '/objections',
   path: '/objections',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -254,119 +220,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char91DotwellKnownChar93OauthProtectedResourceRoute =
-  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
-    id: '/.well-known/oauth-protected-resource',
-    path: '/.well-known/oauth-protected-resource',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char91DotmcpChar93ListToolsRoute =
-  Char91DotmcpChar93ListToolsRouteImport.update({
-    id: '/.mcp/list-tools',
-    path: '/.mcp/list-tools',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicUniversityRoute = ApiPublicUniversityRouteImport.update({
-  id: '/api/public/university',
-  path: '/api/public/university',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicTrustRoute = ApiPublicTrustRouteImport.update({
-  id: '/api/public/trust',
-  path: '/api/public/trust',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicTrendsRoute = ApiPublicTrendsRouteImport.update({
-  id: '/api/public/trends',
-  path: '/api/public/trends',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicSosRoute = ApiPublicSosRouteImport.update({
-  id: '/api/public/sos',
-  path: '/api/public/sos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicSkinDetectRoute = ApiPublicSkinDetectRouteImport.update({
-  id: '/api/public/skin-detect',
-  path: '/api/public/skin-detect',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicSimulatorRoute = ApiPublicSimulatorRouteImport.update({
-  id: '/api/public/simulator',
-  path: '/api/public/simulator',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicReplenishRoute = ApiPublicReplenishRouteImport.update({
-  id: '/api/public/replenish',
-  path: '/api/public/replenish',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicQuickAnalyzeRoute = ApiPublicQuickAnalyzeRouteImport.update({
-  id: '/api/public/quick-analyze',
-  path: '/api/public/quick-analyze',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicProgressRoute = ApiPublicProgressRouteImport.update({
-  id: '/api/public/progress',
-  path: '/api/public/progress',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicObjectionRoute = ApiPublicObjectionRouteImport.update({
-  id: '/api/public/objection',
-  path: '/api/public/objection',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicNextBestRoute = ApiPublicNextBestRouteImport.update({
-  id: '/api/public/next-best',
-  path: '/api/public/next-best',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicDupesRoute = ApiPublicDupesRouteImport.update({
-  id: '/api/public/dupes',
-  path: '/api/public/dupes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicCopilotRoute = ApiPublicCopilotRouteImport.update({
-  id: '/api/public/copilot',
-  path: '/api/public/copilot',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicConflictsRoute = ApiPublicConflictsRouteImport.update({
-  id: '/api/public/conflicts',
-  path: '/api/public/conflicts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicCompatRoute = ApiPublicCompatRouteImport.update({
-  id: '/api/public/compat',
-  path: '/api/public/compat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicChatRoute = ApiPublicChatRouteImport.update({
-  id: '/api/public/chat',
-  path: '/api/public/chat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicBuilderRoute = ApiPublicBuilderRouteImport.update({
-  id: '/api/public/builder',
-  path: '/api/public/builder',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicAnalyzeRoute = ApiPublicAnalyzeRouteImport.update({
-  id: '/api/public/analyze',
-  path: '/api/public/analyze',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicAcademyRoute = ApiPublicAcademyRouteImport.update({
-  id: '/api/public/academy',
-  path: '/api/public/academy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Char91DotmcpChar93InvokeToolToolRoute =
-  Char91DotmcpChar93InvokeToolToolRouteImport.update({
-    id: '/.mcp/invoke-tool/$tool',
-    path: '/.mcp/invoke-tool/$tool',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -387,7 +240,6 @@ export interface FileRoutesByFullPath {
   '/founder': typeof FounderRoute
   '/history': typeof HistoryRoute
   '/login': typeof LoginRoute
-  '/mcp': typeof McpRoute
   '/objections': typeof ObjectionsRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -399,35 +251,12 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/simulator': typeof SimulatorRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sos': typeof SosRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
   '/trends': typeof TrendsRoute
   '/trust': typeof TrustRoute
   '/university': typeof UniversityRoute
-  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
-  '/api/public/academy': typeof ApiPublicAcademyRoute
-  '/api/public/analyze': typeof ApiPublicAnalyzeRoute
-  '/api/public/builder': typeof ApiPublicBuilderRoute
-  '/api/public/chat': typeof ApiPublicChatRoute
-  '/api/public/compat': typeof ApiPublicCompatRoute
-  '/api/public/conflicts': typeof ApiPublicConflictsRoute
-  '/api/public/copilot': typeof ApiPublicCopilotRoute
-  '/api/public/dupes': typeof ApiPublicDupesRoute
-  '/api/public/next-best': typeof ApiPublicNextBestRoute
-  '/api/public/objection': typeof ApiPublicObjectionRoute
-  '/api/public/progress': typeof ApiPublicProgressRoute
-  '/api/public/quick-analyze': typeof ApiPublicQuickAnalyzeRoute
-  '/api/public/replenish': typeof ApiPublicReplenishRoute
-  '/api/public/simulator': typeof ApiPublicSimulatorRoute
-  '/api/public/skin-detect': typeof ApiPublicSkinDetectRoute
-  '/api/public/sos': typeof ApiPublicSosRoute
-  '/api/public/trends': typeof ApiPublicTrendsRoute
-  '/api/public/trust': typeof ApiPublicTrustRoute
-  '/api/public/university': typeof ApiPublicUniversityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -448,7 +277,6 @@ export interface FileRoutesByTo {
   '/founder': typeof FounderRoute
   '/history': typeof HistoryRoute
   '/login': typeof LoginRoute
-  '/mcp': typeof McpRoute
   '/objections': typeof ObjectionsRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -460,35 +288,12 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/simulator': typeof SimulatorRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sos': typeof SosRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
   '/trends': typeof TrendsRoute
   '/trust': typeof TrustRoute
   '/university': typeof UniversityRoute
-  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
-  '/api/public/academy': typeof ApiPublicAcademyRoute
-  '/api/public/analyze': typeof ApiPublicAnalyzeRoute
-  '/api/public/builder': typeof ApiPublicBuilderRoute
-  '/api/public/chat': typeof ApiPublicChatRoute
-  '/api/public/compat': typeof ApiPublicCompatRoute
-  '/api/public/conflicts': typeof ApiPublicConflictsRoute
-  '/api/public/copilot': typeof ApiPublicCopilotRoute
-  '/api/public/dupes': typeof ApiPublicDupesRoute
-  '/api/public/next-best': typeof ApiPublicNextBestRoute
-  '/api/public/objection': typeof ApiPublicObjectionRoute
-  '/api/public/progress': typeof ApiPublicProgressRoute
-  '/api/public/quick-analyze': typeof ApiPublicQuickAnalyzeRoute
-  '/api/public/replenish': typeof ApiPublicReplenishRoute
-  '/api/public/simulator': typeof ApiPublicSimulatorRoute
-  '/api/public/skin-detect': typeof ApiPublicSkinDetectRoute
-  '/api/public/sos': typeof ApiPublicSosRoute
-  '/api/public/trends': typeof ApiPublicTrendsRoute
-  '/api/public/trust': typeof ApiPublicTrustRoute
-  '/api/public/university': typeof ApiPublicUniversityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -510,7 +315,6 @@ export interface FileRoutesById {
   '/founder': typeof FounderRoute
   '/history': typeof HistoryRoute
   '/login': typeof LoginRoute
-  '/mcp': typeof McpRoute
   '/objections': typeof ObjectionsRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -522,35 +326,12 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/simulator': typeof SimulatorRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sos': typeof SosRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
   '/trends': typeof TrendsRoute
   '/trust': typeof TrustRoute
   '/university': typeof UniversityRoute
-  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
-  '/api/public/academy': typeof ApiPublicAcademyRoute
-  '/api/public/analyze': typeof ApiPublicAnalyzeRoute
-  '/api/public/builder': typeof ApiPublicBuilderRoute
-  '/api/public/chat': typeof ApiPublicChatRoute
-  '/api/public/compat': typeof ApiPublicCompatRoute
-  '/api/public/conflicts': typeof ApiPublicConflictsRoute
-  '/api/public/copilot': typeof ApiPublicCopilotRoute
-  '/api/public/dupes': typeof ApiPublicDupesRoute
-  '/api/public/next-best': typeof ApiPublicNextBestRoute
-  '/api/public/objection': typeof ApiPublicObjectionRoute
-  '/api/public/progress': typeof ApiPublicProgressRoute
-  '/api/public/quick-analyze': typeof ApiPublicQuickAnalyzeRoute
-  '/api/public/replenish': typeof ApiPublicReplenishRoute
-  '/api/public/simulator': typeof ApiPublicSimulatorRoute
-  '/api/public/skin-detect': typeof ApiPublicSkinDetectRoute
-  '/api/public/sos': typeof ApiPublicSosRoute
-  '/api/public/trends': typeof ApiPublicTrendsRoute
-  '/api/public/trust': typeof ApiPublicTrustRoute
-  '/api/public/university': typeof ApiPublicUniversityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -573,7 +354,6 @@ export interface FileRouteTypes {
     | '/founder'
     | '/history'
     | '/login'
-    | '/mcp'
     | '/objections'
     | '/privacy'
     | '/profile'
@@ -585,35 +365,12 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/simulator'
-    | '/sitemap.xml'
     | '/sos'
     | '/terms'
     | '/tools'
     | '/trends'
     | '/trust'
     | '/university'
-    | '/.mcp/list-tools'
-    | '/.well-known/oauth-protected-resource'
-    | '/.mcp/invoke-tool/$tool'
-    | '/api/public/academy'
-    | '/api/public/analyze'
-    | '/api/public/builder'
-    | '/api/public/chat'
-    | '/api/public/compat'
-    | '/api/public/conflicts'
-    | '/api/public/copilot'
-    | '/api/public/dupes'
-    | '/api/public/next-best'
-    | '/api/public/objection'
-    | '/api/public/progress'
-    | '/api/public/quick-analyze'
-    | '/api/public/replenish'
-    | '/api/public/simulator'
-    | '/api/public/skin-detect'
-    | '/api/public/sos'
-    | '/api/public/trends'
-    | '/api/public/trust'
-    | '/api/public/university'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -634,7 +391,6 @@ export interface FileRouteTypes {
     | '/founder'
     | '/history'
     | '/login'
-    | '/mcp'
     | '/objections'
     | '/privacy'
     | '/profile'
@@ -646,35 +402,12 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/simulator'
-    | '/sitemap.xml'
     | '/sos'
     | '/terms'
     | '/tools'
     | '/trends'
     | '/trust'
     | '/university'
-    | '/.mcp/list-tools'
-    | '/.well-known/oauth-protected-resource'
-    | '/.mcp/invoke-tool/$tool'
-    | '/api/public/academy'
-    | '/api/public/analyze'
-    | '/api/public/builder'
-    | '/api/public/chat'
-    | '/api/public/compat'
-    | '/api/public/conflicts'
-    | '/api/public/copilot'
-    | '/api/public/dupes'
-    | '/api/public/next-best'
-    | '/api/public/objection'
-    | '/api/public/progress'
-    | '/api/public/quick-analyze'
-    | '/api/public/replenish'
-    | '/api/public/simulator'
-    | '/api/public/skin-detect'
-    | '/api/public/sos'
-    | '/api/public/trends'
-    | '/api/public/trust'
-    | '/api/public/university'
   id:
     | '__root__'
     | '/'
@@ -695,7 +428,6 @@ export interface FileRouteTypes {
     | '/founder'
     | '/history'
     | '/login'
-    | '/mcp'
     | '/objections'
     | '/privacy'
     | '/profile'
@@ -707,35 +439,12 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/simulator'
-    | '/sitemap.xml'
     | '/sos'
     | '/terms'
     | '/tools'
     | '/trends'
     | '/trust'
     | '/university'
-    | '/.mcp/list-tools'
-    | '/.well-known/oauth-protected-resource'
-    | '/.mcp/invoke-tool/$tool'
-    | '/api/public/academy'
-    | '/api/public/analyze'
-    | '/api/public/builder'
-    | '/api/public/chat'
-    | '/api/public/compat'
-    | '/api/public/conflicts'
-    | '/api/public/copilot'
-    | '/api/public/dupes'
-    | '/api/public/next-best'
-    | '/api/public/objection'
-    | '/api/public/progress'
-    | '/api/public/quick-analyze'
-    | '/api/public/replenish'
-    | '/api/public/simulator'
-    | '/api/public/skin-detect'
-    | '/api/public/sos'
-    | '/api/public/trends'
-    | '/api/public/trust'
-    | '/api/public/university'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -757,7 +466,6 @@ export interface RootRouteChildren {
   FounderRoute: typeof FounderRoute
   HistoryRoute: typeof HistoryRoute
   LoginRoute: typeof LoginRoute
-  McpRoute: typeof McpRoute
   ObjectionsRoute: typeof ObjectionsRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
@@ -769,35 +477,12 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   SignupRoute: typeof SignupRoute
   SimulatorRoute: typeof SimulatorRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SosRoute: typeof SosRoute
   TermsRoute: typeof TermsRoute
   ToolsRoute: typeof ToolsRoute
   TrendsRoute: typeof TrendsRoute
   TrustRoute: typeof TrustRoute
   UniversityRoute: typeof UniversityRoute
-  Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
-  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
-  ApiPublicAcademyRoute: typeof ApiPublicAcademyRoute
-  ApiPublicAnalyzeRoute: typeof ApiPublicAnalyzeRoute
-  ApiPublicBuilderRoute: typeof ApiPublicBuilderRoute
-  ApiPublicChatRoute: typeof ApiPublicChatRoute
-  ApiPublicCompatRoute: typeof ApiPublicCompatRoute
-  ApiPublicConflictsRoute: typeof ApiPublicConflictsRoute
-  ApiPublicCopilotRoute: typeof ApiPublicCopilotRoute
-  ApiPublicDupesRoute: typeof ApiPublicDupesRoute
-  ApiPublicNextBestRoute: typeof ApiPublicNextBestRoute
-  ApiPublicObjectionRoute: typeof ApiPublicObjectionRoute
-  ApiPublicProgressRoute: typeof ApiPublicProgressRoute
-  ApiPublicQuickAnalyzeRoute: typeof ApiPublicQuickAnalyzeRoute
-  ApiPublicReplenishRoute: typeof ApiPublicReplenishRoute
-  ApiPublicSimulatorRoute: typeof ApiPublicSimulatorRoute
-  ApiPublicSkinDetectRoute: typeof ApiPublicSkinDetectRoute
-  ApiPublicSosRoute: typeof ApiPublicSosRoute
-  ApiPublicTrendsRoute: typeof ApiPublicTrendsRoute
-  ApiPublicTrustRoute: typeof ApiPublicTrustRoute
-  ApiPublicUniversityRoute: typeof ApiPublicUniversityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -842,13 +527,6 @@ declare module '@tanstack/react-router' {
       path: '/sos'
       fullPath: '/sos'
       preLoaderRoute: typeof SosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/simulator': {
@@ -926,13 +604,6 @@ declare module '@tanstack/react-router' {
       path: '/objections'
       fullPath: '/objections'
       preLoaderRoute: typeof ObjectionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -1061,160 +732,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.mcp/list-tools': {
-      id: '/.mcp/list-tools'
-      path: '/.mcp/list-tools'
-      fullPath: '/.mcp/list-tools'
-      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/university': {
-      id: '/api/public/university'
-      path: '/api/public/university'
-      fullPath: '/api/public/university'
-      preLoaderRoute: typeof ApiPublicUniversityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/trust': {
-      id: '/api/public/trust'
-      path: '/api/public/trust'
-      fullPath: '/api/public/trust'
-      preLoaderRoute: typeof ApiPublicTrustRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/trends': {
-      id: '/api/public/trends'
-      path: '/api/public/trends'
-      fullPath: '/api/public/trends'
-      preLoaderRoute: typeof ApiPublicTrendsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/sos': {
-      id: '/api/public/sos'
-      path: '/api/public/sos'
-      fullPath: '/api/public/sos'
-      preLoaderRoute: typeof ApiPublicSosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/skin-detect': {
-      id: '/api/public/skin-detect'
-      path: '/api/public/skin-detect'
-      fullPath: '/api/public/skin-detect'
-      preLoaderRoute: typeof ApiPublicSkinDetectRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/simulator': {
-      id: '/api/public/simulator'
-      path: '/api/public/simulator'
-      fullPath: '/api/public/simulator'
-      preLoaderRoute: typeof ApiPublicSimulatorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/replenish': {
-      id: '/api/public/replenish'
-      path: '/api/public/replenish'
-      fullPath: '/api/public/replenish'
-      preLoaderRoute: typeof ApiPublicReplenishRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/quick-analyze': {
-      id: '/api/public/quick-analyze'
-      path: '/api/public/quick-analyze'
-      fullPath: '/api/public/quick-analyze'
-      preLoaderRoute: typeof ApiPublicQuickAnalyzeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/progress': {
-      id: '/api/public/progress'
-      path: '/api/public/progress'
-      fullPath: '/api/public/progress'
-      preLoaderRoute: typeof ApiPublicProgressRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/objection': {
-      id: '/api/public/objection'
-      path: '/api/public/objection'
-      fullPath: '/api/public/objection'
-      preLoaderRoute: typeof ApiPublicObjectionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/next-best': {
-      id: '/api/public/next-best'
-      path: '/api/public/next-best'
-      fullPath: '/api/public/next-best'
-      preLoaderRoute: typeof ApiPublicNextBestRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/dupes': {
-      id: '/api/public/dupes'
-      path: '/api/public/dupes'
-      fullPath: '/api/public/dupes'
-      preLoaderRoute: typeof ApiPublicDupesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/copilot': {
-      id: '/api/public/copilot'
-      path: '/api/public/copilot'
-      fullPath: '/api/public/copilot'
-      preLoaderRoute: typeof ApiPublicCopilotRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/conflicts': {
-      id: '/api/public/conflicts'
-      path: '/api/public/conflicts'
-      fullPath: '/api/public/conflicts'
-      preLoaderRoute: typeof ApiPublicConflictsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/compat': {
-      id: '/api/public/compat'
-      path: '/api/public/compat'
-      fullPath: '/api/public/compat'
-      preLoaderRoute: typeof ApiPublicCompatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/chat': {
-      id: '/api/public/chat'
-      path: '/api/public/chat'
-      fullPath: '/api/public/chat'
-      preLoaderRoute: typeof ApiPublicChatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/builder': {
-      id: '/api/public/builder'
-      path: '/api/public/builder'
-      fullPath: '/api/public/builder'
-      preLoaderRoute: typeof ApiPublicBuilderRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/analyze': {
-      id: '/api/public/analyze'
-      path: '/api/public/analyze'
-      fullPath: '/api/public/analyze'
-      preLoaderRoute: typeof ApiPublicAnalyzeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/academy': {
-      id: '/api/public/academy'
-      path: '/api/public/academy'
-      fullPath: '/api/public/academy'
-      preLoaderRoute: typeof ApiPublicAcademyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.mcp/invoke-tool/$tool': {
-      id: '/.mcp/invoke-tool/$tool'
-      path: '/.mcp/invoke-tool/$tool'
-      fullPath: '/.mcp/invoke-tool/$tool'
-      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -1237,7 +754,6 @@ const rootRouteChildren: RootRouteChildren = {
   FounderRoute: FounderRoute,
   HistoryRoute: HistoryRoute,
   LoginRoute: LoginRoute,
-  McpRoute: McpRoute,
   ObjectionsRoute: ObjectionsRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
@@ -1249,47 +765,14 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   SignupRoute: SignupRoute,
   SimulatorRoute: SimulatorRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SosRoute: SosRoute,
   TermsRoute: TermsRoute,
   ToolsRoute: ToolsRoute,
   TrendsRoute: TrendsRoute,
   TrustRoute: TrustRoute,
   UniversityRoute: UniversityRoute,
-  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
-  Char91DotwellKnownChar93OauthProtectedResourceRoute:
-    Char91DotwellKnownChar93OauthProtectedResourceRoute,
-  Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
-  ApiPublicAcademyRoute: ApiPublicAcademyRoute,
-  ApiPublicAnalyzeRoute: ApiPublicAnalyzeRoute,
-  ApiPublicBuilderRoute: ApiPublicBuilderRoute,
-  ApiPublicChatRoute: ApiPublicChatRoute,
-  ApiPublicCompatRoute: ApiPublicCompatRoute,
-  ApiPublicConflictsRoute: ApiPublicConflictsRoute,
-  ApiPublicCopilotRoute: ApiPublicCopilotRoute,
-  ApiPublicDupesRoute: ApiPublicDupesRoute,
-  ApiPublicNextBestRoute: ApiPublicNextBestRoute,
-  ApiPublicObjectionRoute: ApiPublicObjectionRoute,
-  ApiPublicProgressRoute: ApiPublicProgressRoute,
-  ApiPublicQuickAnalyzeRoute: ApiPublicQuickAnalyzeRoute,
-  ApiPublicReplenishRoute: ApiPublicReplenishRoute,
-  ApiPublicSimulatorRoute: ApiPublicSimulatorRoute,
-  ApiPublicSkinDetectRoute: ApiPublicSkinDetectRoute,
-  ApiPublicSosRoute: ApiPublicSosRoute,
-  ApiPublicTrendsRoute: ApiPublicTrendsRoute,
-  ApiPublicTrustRoute: ApiPublicTrustRoute,
-  ApiPublicUniversityRoute: ApiPublicUniversityRoute,
 }
+
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
