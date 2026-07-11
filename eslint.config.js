@@ -50,15 +50,3 @@ export default tseslint.config(
   },
   eslintPluginPrettier,
 );
-{
-  "build": {
-    "env": {
-      "NODE_VERSION": "18.x"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]

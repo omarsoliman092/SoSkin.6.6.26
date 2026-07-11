@@ -1,4 +1,4 @@
-// Robust mock for TanStack Start functions and middleware in SPA mode
+// Standard SPA mock for server functions
 export function createServerFn(options: any) {
   const fn = async (args: any) => {
     if (options.handler) {
@@ -38,5 +38,7 @@ export function createMiddleware() {
 }
 
 export function getRequest() {
-  return {};
+  return {
+    headers: new Map()
+  };
 }

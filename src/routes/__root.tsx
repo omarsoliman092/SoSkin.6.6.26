@@ -17,7 +17,7 @@ import "@fontsource/cormorant-garamond/400.css";
 import "@fontsource/cormorant-garamond/500.css";
 import "@fontsource/cormorant-garamond/600.css";
 
-// Simple Error Component for SPA
+// Error component for the new design
 function RootErrorComponent({ error }: { error: Error }) {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-6 text-center">
@@ -41,6 +41,7 @@ const PUBLIC_PATHS = ["/", "/login", "/signup", "/reset-password", "/founder", "
 
 function AuthSync() {
   const router = useRouter();
+  const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -51,16 +52,14 @@ function AuthSync() {
     return () => subscription.unsubscribe();
   }, [router]);
 
-  // Temporary fix to stop the login loop while we verify the new design
   useEffect(() => {
     if (isLoading) return;
     const path = location.pathname;
     const isPublic = PUBLIC_PATHS.includes(path);
-    // Only redirect if NOT authenticated AND trying to access a restricted page
-    // if (!isAuthenticated && !isPublic) {
-    //   navigate({ to: "/login" });
-    // }
-  }, [isAuthenticated, isLoading, location.pathname]);
+    if (!isAuthenticated && !isPublic) {
+      navigate({ to: "/login" });
+    }
+  }, [isAuthenticated, isLoading, location.pathname, navigate]);
 
   return null;
 }
